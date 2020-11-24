@@ -569,6 +569,121 @@ public class AchatManagers : MonoBehaviour
 
     }
 
+    public void AchatRecolteWoodLevel3Upgrad6()
+    {
+        if (upgradeManagers.recolteWoodLevel3Upgrade6 == false)
+        {
+            if (resourceManagers.currentMoney >= prixRecolteWoodLevel3Upgrade6)
+            {
+                upgradeManagers.RecolteWoodLevel3Upgrade6();
+                resourceManagers.currentMoney -= prixRecolteWoodLevel3Upgrade6;
+                resourceManagers.Achat();
+                StartCoroutine(TextFeedBack());
+                textFeedBack_T.text = "Recolte Wood Upgrade 6 unlocked";
+                buttonRecolteWoodLevel3Upgrade6.SetActive(false);
+            }
+
+            if (resourceManagers.currentMoney < prixRecolteWoodLevel3Upgrade6)
+            {
+                StartCoroutine(TextFeedBack());
+                textFeedBack_T.text = "Not enough money ! To have it you need " + prixRecolteWoodLevel3Upgrade6;
+            }
+        }
+
+        if (upgradeManagers.recolteWoodLevel3Upgrade6 == true)
+        {
+
+        }
+
+    }
+
+
+    public void AchatRecolteRockLevel3Upgrade6()
+    {
+        if (upgradeManagers.recolteRockLevel3Upgrade6 == false)
+        {
+            if (resourceManagers.currentMoney >= prixRecolteRockLevel3Upgrade6)
+            {
+                upgradeManagers.RecolteRockLevel3Upgrade6();
+                resourceManagers.currentMoney -= prixRecolteRockLevel3Upgrade6;
+                resourceManagers.Achat();
+                StartCoroutine(TextFeedBack());
+                textFeedBack_T.text = "Recolte Rock Upgrade 6 unlocked";
+                buttonRecolteRockLevel3Upgrade6.SetActive(false);
+            }
+
+            if (resourceManagers.currentMoney < prixRecolteRockLevel3Upgrade6)
+            {
+                StartCoroutine(TextFeedBack());
+                textFeedBack_T.text = "Not enough money ! To have it you need " + prixRecolteRockLevel3Upgrade6;
+            }
+        }
+
+        if (upgradeManagers.recolteRockLevel3Upgrade6 == true)
+        {
+
+        }
+
+
+    }
+
+    public void AchatRecolteIronLevel3Upgrade6()
+    {
+        if (upgradeManagers.recolteIronLevel3Upgrade6 == false)
+        {
+            if (resourceManagers.currentMoney >= prixRecolteIronLevel3Upgrade6)
+            {
+                upgradeManagers.RecolteIronLevel3Upgrade6();
+                resourceManagers.currentMoney -= prixRecolteIronLevel3Upgrade6;
+                resourceManagers.Achat();
+                StartCoroutine(TextFeedBack());
+                textFeedBack_T.text = "Recolte Iron Upgrade 6 unlocked";
+                buttonRecolteIronLevel3Upgrade6.SetActive(false);
+            }
+
+            if (resourceManagers.currentMoney < prixRecolteIronLevel3Upgrade6)
+            {
+                StartCoroutine(TextFeedBack());
+                textFeedBack_T.text = "Not enough money ! To have it you need " + prixRecolteIronLevel3Upgrade6;
+            }
+        }
+
+        if (upgradeManagers.recolteIronLevel3Upgrade6 == true)
+        {
+
+        }
+
+
+    }
+
+    public void AchatVitesseLevel3Upgrade6()
+    {
+        if (upgradeManagers.vitesseLevel3Upgrade6 == false)
+        {
+            if (resourceManagers.currentMoney >= prixVitesseLevel3Upgrade6)
+            {
+                upgradeManagers.VitesseLevel3Upgrade6();
+                resourceManagers.currentMoney -= prixVitesseLevel3Upgrade6;
+                resourceManagers.Achat();
+                StartCoroutine(TextFeedBack());
+                textFeedBack_T.text = "Vitesse Upgrade 6 unlocked";
+                buttonVitesseLevel3Upgrade6.SetActive(false);
+            }
+
+            if (resourceManagers.currentMoney < prixVitesseLevel3Upgrade6)
+            {
+                StartCoroutine(TextFeedBack());
+                textFeedBack_T.text = "Not enough money ! To have it you need " + prixVitesseLevel3Upgrade6;
+            }
+        }
+
+        if (upgradeManagers.vitesseLevel3Upgrade6 == true)
+        {
+
+        }
+
+    }
+
 
 }
 
