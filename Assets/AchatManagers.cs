@@ -58,6 +58,27 @@ public class AchatManagers : MonoBehaviour
     public float prixLevel2ToLevel3 = 3000;
     public GameObject buttonLevel2ToLevel3;
     #endregion
+
+    #region Achat Level3
+    public float prixChassiLevel3Upgrade6 = 600;
+    public GameObject buttonChassiLevel3Upgrade6;
+
+    public float prixFuelLevel3Upgrade6 = 500;
+    public GameObject buttonFuelLevel3Upgrade6;
+
+    public float prixRecolteWoodLevel3Upgrade6 = 400;
+    public GameObject buttonRecolteWoodLevel3Upgrade6;
+
+    public float prixRecolteRockLevel3Upgrade6 = 500;
+    public GameObject buttonRecolteRockLevel3Upgrade6;
+
+    public float prixRecolteIronLevel3Upgrade6 = 500;
+    public GameObject buttonRecolteIronLevel3Upgrade6;
+
+    public float prixVitesseLevel3Upgrade6 = 600;
+    public GameObject buttonVitesseLevel3Upgrade6;
+
+    #endregion
     // Start is called before the first frame update
     void Start()
     {
@@ -73,11 +94,19 @@ public class AchatManagers : MonoBehaviour
 
         buttonLevel2ToLevel3.SetActive(false);
         buttonLevel1ToLevel2.SetActive(false);
+
         buttonChassiLevel2Upgrade4.SetActive(false);
         buttonFuelLevel2Upgrade4.SetActive(false);
         buttonRecolteRockLevel2Upgrade4.SetActive(false);
         buttonRecolteWoodLevel2Upgrade4.SetActive(false);
         buttonVitesseLevel2Upgrade4.SetActive(false);
+
+        buttonChassiLevel3Upgrade6.SetActive(false);
+        buttonFuelLevel3Upgrade6.SetActive(false);
+        buttonRecolteRockLevel3Upgrade6.SetActive(false);
+        buttonRecolteWoodLevel3Upgrade6.SetActive(false);
+        buttonRecolteIronLevel3Upgrade6.SetActive(false);
+        buttonVitesseLevel3Upgrade6.SetActive(false);
     }
 
     // Update is called once per frame
@@ -117,6 +146,23 @@ public class AchatManagers : MonoBehaviour
             buttonRecolteRockLevel2Upgrade4.SetActive(true);
             buttonRecolteWoodLevel2Upgrade4.SetActive(true);
             buttonVitesseLevel2Upgrade4.SetActive(true);
+        }
+
+        if (youAreLevel3)
+        {
+            buttonChassiLevel3Upgrade6.SetActive(true);
+            buttonFuelLevel3Upgrade6.SetActive(true);
+            buttonRecolteRockLevel3Upgrade6.SetActive(true);
+            buttonRecolteWoodLevel3Upgrade6.SetActive(true);
+            buttonRecolteIronLevel3Upgrade6.SetActive(true);
+            buttonVitesseLevel3Upgrade6.SetActive(true);
+
+
+            buttonChassiLevel2Upgrade4.SetActive(false);
+            buttonFuelLevel2Upgrade4.SetActive(false);
+            buttonRecolteRockLevel2Upgrade4.SetActive(false);
+            buttonRecolteWoodLevel2Upgrade4.SetActive(false);
+            buttonVitesseLevel2Upgrade4.SetActive(false);
         }
     }
     public void Close()
@@ -461,6 +507,69 @@ public class AchatManagers : MonoBehaviour
         }
 
     }
+
+
+
+
+    public void AchatChassiLevel3Upgrade6()
+    {
+        if (upgradeManagers.chassiLevel3Upgrade6 == false)
+        {
+            if (resourceManagers.currentMoney >= prixChassiLevel3Upgrade6)
+            {
+                upgradeManagers.ChassiLevel3Upgrade6();
+                resourceManagers.currentMoney -= prixChassiLevel3Upgrade6;
+                resourceManagers.Achat();
+                StartCoroutine(TextFeedBack());
+                textFeedBack_T.text = "Chassi Upgrade 6 unlocked";
+                buttonChassiLevel3Upgrade6.SetActive(false);
+            }
+
+            if (resourceManagers.currentMoney < prixChassiLevel3Upgrade6)
+            {
+                StartCoroutine(TextFeedBack());
+                textFeedBack_T.text = "Not enough money ! To have it you need " + prixChassiLevel3Upgrade6;
+            }
+        }
+
+        if (upgradeManagers.chassiLevel3Upgrade6 == true)
+        {
+
+        }
+
+
+    }
+
+    public void AchatFuelLevel3Upgrade6()
+    {
+        if (upgradeManagers.fuelLevel3Upgrade6 == false)
+        {
+            if (resourceManagers.currentMoney >= prixFuelLevel3Upgrade6)
+            {
+                upgradeManagers.FuelLevel3Upgrade6();
+                resourceManagers.currentMoney -= prixFuelLevel3Upgrade6;
+                resourceManagers.Achat();
+                StartCoroutine(TextFeedBack());
+                textFeedBack_T.text = "Fuel Upgrade 6 unlocked";
+                buttonFuelLevel3Upgrade6.SetActive(false);
+            }
+
+            if (resourceManagers.currentMoney < prixFuelLevel3Upgrade6)
+            {
+                StartCoroutine(TextFeedBack());
+                textFeedBack_T.text = "Not enough money ! To have it you need " + prixFuelLevel3Upgrade6;
+            }
+        }
+
+        if (upgradeManagers.fuelLevel3Upgrade6 == true)
+        {
+
+        }
+
+
+    }
+
+
 }
 
 

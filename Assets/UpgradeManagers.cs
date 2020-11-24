@@ -285,11 +285,54 @@ public class UpgradeManagers : MonoBehaviour
         chassiLevel3Upgrade5 = false;
         chassiLevel3Upgrade5 = true;
 
-        if (chassiLevel3Upgrade6 == true && recolteWoodLevel3Upgrade6 == true && recolteRockLevel3Upgrade6 == true && vitesseLevel3Upgrade6 == true && fuelLevel3Upgrade6 == true)
+        if (chassiLevel3Upgrade6 == true && recolteWoodLevel3Upgrade6 == true && recolteRockLevel3Upgrade6 == true && recolteIronLevel3Upgrade6 == true && vitesseLevel3Upgrade6 == true && fuelLevel3Upgrade6 == true)
         {
-            achatManagers.youCanHaveLevel3 = true;
-            achatManagers.YoucanHaveLevel3();
-            Debug.Log("youCanHaveLevel3");
+            
+        }
+    }
+
+    public void RecolteWoodLevel3Upgrade6()
+    {
+        recolteWoodLevel3Upgrade5 = false;
+        recolteWoodLevel3Upgrade6 = true;
+
+        if (chassiLevel3Upgrade6 == true && recolteWoodLevel3Upgrade6 == true && recolteRockLevel3Upgrade6 == true && recolteIronLevel3Upgrade6 == true && vitesseLevel3Upgrade6 == true && fuelLevel3Upgrade6 == true)
+        {
+
+        }
+    }
+
+    public void RecolteRockLevel3Upgrade6()
+    {
+        recolteRockLevel3Upgrade5 = false;
+        recolteRockLevel3Upgrade6 = true;
+
+        if (chassiLevel3Upgrade6 == true && recolteWoodLevel3Upgrade6 == true && recolteRockLevel3Upgrade6 == true && recolteIronLevel3Upgrade6 == true && vitesseLevel3Upgrade6 == true && fuelLevel3Upgrade6 == true)
+        {
+
+        }
+    }
+
+    public void RecolteIronLevel3Upgrade6()
+    {
+        recolteIronLevel3Upgrade5 = false;
+        recolteIronLevel3Upgrade6 = true;
+
+        if (chassiLevel3Upgrade6 == true && recolteWoodLevel3Upgrade6 == true && recolteRockLevel3Upgrade6 == true && recolteIronLevel3Upgrade6 == true && vitesseLevel3Upgrade6 == true && fuelLevel3Upgrade6 == true)
+        {
+
+        }
+    }
+
+    public void VitesseLevel3Upgrade6()
+    {
+        vitesseLevel3Upgrade5 = false;
+        vitesseLevel3Upgrade6 = true;
+
+
+        if (chassiLevel3Upgrade6 == true && recolteWoodLevel3Upgrade6 == true && recolteRockLevel3Upgrade6 == true && recolteIronLevel3Upgrade6 == true && vitesseLevel3Upgrade6 == true && fuelLevel3Upgrade6 == true)
+        {
+
         }
     }
 
